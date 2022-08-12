@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function CardBg() {
+export default function CardBg({ shoeImg }) {
   return (
     <div className="cardBg">
-      <img src="" alt="" />
+      <img src={shoeImg} alt="shoe" />
     </div>
   );
 }
