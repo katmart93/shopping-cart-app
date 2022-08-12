@@ -1,9 +1,9 @@
-import React from "react";
+import Card from "./Card";
 
 export default function CardContainer() {
   return (
     <div className="cardContainer">
-      <p>Card</p>
+      <Card />
     </div>
   );
 }
