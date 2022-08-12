@@ -8,12 +8,29 @@ import CardContainer from "./CardContainer";
 import ShoppingCartContainer from "./ShoppingCartContainer";
 
 export default function Hero() {
-  const [totalPrice, setTotallPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [itemCount, setItemCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [hiddenMenu, setHiddenMenu] = useState(false);
 
-  const updateCart = () => {};
+  const updateCart = (shoeImg, shoePrice) => {
+    setItemCount((prevCount) => prevCount + 1);
+    setTotalPrice((prevPrice) => prevPrice + shoePrice);
+    if (cartItems.find((item) => item.img === shoeImg)) {
+      const result = cartItems.find((item) => item.img === shoeImg);
+      result.catrtCount++;
+    }
+
+    setCartItems([
+      ...cartItems,
+      {
+        img: shoeImg,
+        price: shoePrice,
+        id: uuidv4(),
+        cartCount: 1,
+      },
+    ]);
+  };
 
   return (
     <section className="hero">
