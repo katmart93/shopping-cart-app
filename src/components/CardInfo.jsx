@@ -1,10 +1,10 @@
 import Button from "./reusableComponents/Button";
 
-export default function CardInfo({ shoePrice }) {
+export default function CardInfo({ shoePrice, updateCart }) {
   return (
     <div className="cardInfo">
       <p>${shoePrice}</p>
-      <Button />
+      <Button addItem={updateCart} />
     </div>
   );
 }

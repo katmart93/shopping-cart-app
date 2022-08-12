@@ -13,11 +13,13 @@ export default function Hero() {
   const [cartItems, setCartItems] = useState([]);
   const [hiddenMenu, setHiddenMenu] = useState(false);
 
+  const updateCart = () => {};
+
   return (
     <section className="hero">
       <Nav />
       <Container>
-        <CardContainer />
+        <CardContainer updateCart={updateCart} />
         <ShoppingCartContainer
           hiddenMenu={hiddenMenu}
           cartItems={cartItems}

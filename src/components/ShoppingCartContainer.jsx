@@ -9,7 +9,7 @@ export default function ShoppingCartContainer({
 }) {
   return (
     <div className="shoppingCartContainer">
-      <ShoppingCart />
+      <ShoppingCart cartItems={cartItems} />
     </div>
   );
 }

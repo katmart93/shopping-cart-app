@@ -1,9 +1,9 @@
 import Card from "./Card";
 
-export default function CardContainer() {
+export default function CardContainer({ updateCart }) {
   return (
     <div className="cardContainer">
-      <Card />
+      <Card updateCart={updateCart} />
     </div>
   );
 }
