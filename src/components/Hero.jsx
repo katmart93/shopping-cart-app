@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import Nav from "./Nav";
 import Container from "./reusableComponents/Container";
 import CardContainer from "./CardContainer";
+import ShoppingCartContainer from "./ShoppingCartContainer";
 
 export default function Hero() {
   const [totalPrice, setTotallPrice] = useState(0);
@@ -17,6 +18,12 @@ export default function Hero() {
       <Nav />
       <Container>
         <CardContainer />
+        <ShoppingCartContainer
+          hiddenMenu={hiddenMenu}
+          cartItems={cartItems}
+          totalPrice={totalPrice}
+          itemCount={itemCount}
+        />
       </Container>
     </section>
   );
