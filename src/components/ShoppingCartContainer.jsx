@@ -1,4 +1,5 @@
-import React from "react";
+// components
+import ShoppingCart from "./ShoppingCart";
 
 export default function ShoppingCartContainer({
   hiddenMenu,
@@ -8,7 +9,7 @@ export default function ShoppingCartContainer({
 }) {
   return (
     <div className="shoppingCartContainer">
-      <p></p>
+      <ShoppingCart />
     </div>
   );
 }
