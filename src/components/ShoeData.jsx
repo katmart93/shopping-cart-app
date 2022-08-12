@@ -6,29 +6,29 @@ import ShoeFour from "../img/shoe4.png";
 import ShoeFive from "../img/shoe5.png";
 import ShoeSix from "../img/shoe6.png";
 
-export default [
+export const ShoeData = [
   {
     cardImg: ShoeOne,
-    price: 299,
+    cardPrice: 299,
   },
   {
     cardImg: ShoeTwo,
-    price: 199,
+    cardPrice: 199,
   },
   {
     cardImg: ShoeThree,
-    price: 399,
+    cardPrice: 399,
   },
   {
     cardImg: ShoeFour,
-    price: 499,
+    cardPrice: 499,
   },
   {
     cardImg: ShoeFive,
-    price: 599,
+    cardPrice: 599,
   },
   {
     cardImg: ShoeSix,
-    price: 249,
+    cardPrice: 249,
   },
 ];

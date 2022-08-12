@@ -1,9 +1,17 @@
-import React from "react";
+// components
+import CardBg from "./CardBg";
+import CardInfo from "./CardInfo";
+import { ShoeData } from "./ShoeData";
 
 export default function Card() {
   return (
     <>
-      <p>card</p>
+      {ShoeData.map((shoe, idx) => (
+        <div key={idx} className="card">
+          <CardBg shoeImg={shoe.cardImg} />
+          <CardInfo shoePrice={shoe.cardPrice} />
+        </div>
+      ))}
     </>
   );
 }
