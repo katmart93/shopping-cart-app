@@ -11,7 +11,7 @@ export default function ShoppingCartContainer({
   return (
     <div className="shoppingCartContainer">
       <ShoppingCart cartItems={cartItems} />
-      <TotalPrice />
+      <TotalPrice totalPrice={totalPrice} itemCount={itemCount} />
     </div>
   );
 }
