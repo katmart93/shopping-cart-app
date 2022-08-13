@@ -19,6 +19,7 @@ export default function Hero() {
     if (cartItems.find((item) => item.img === shoeImg)) {
       const result = cartItems.find((item) => item.img === shoeImg);
       result.catrtCount++;
+      return;
     }
 
     setCartItems([
