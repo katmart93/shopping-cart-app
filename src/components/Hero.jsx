@@ -35,7 +35,11 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <Nav />
+      <Nav
+        itemCount={itemCount}
+        hiddenMenu={hiddenMenu}
+        setHiddenMenu={setHiddenMenu}
+      />
       <Container>
         <CardContainer updateCart={updateCart} />
         <ShoppingCartContainer
