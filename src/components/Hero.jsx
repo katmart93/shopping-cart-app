@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import Container from "./reusableComponents/Container";
 import CardContainer from "./CardContainer";
 import ShoppingCartContainer from "./ShoppingCartContainer";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 export default function Hero() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -36,6 +37,18 @@ export default function Hero() {
   const removeItem = (id) => {
     const newItems = cartItems.filter((cartItem) => cartItem.id !== id);
     setCartItems(newItems);
+
+    const itemCountResult = newItems.reduce(
+      (acc, val) => (acc += val.cartCount),
+      0
+    );
+    setItemCount(itemCountResult);
+
+    const priceResult = newItems.reduce(
+      (acc, val) => (acc += val.price * val.cartCount),
+      0
+    );
+    setTotalPrice(priceResult);
   };
 
   return (
