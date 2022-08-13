@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ShoppingCart({ cartItems }) {
+export default function ShoppingCart({ cartItems, removeItem }) {
   return (
     <div className="shoppingCart">
       {cartItems.map((item) => (
@@ -11,6 +11,7 @@ export default function ShoppingCart({ cartItems }) {
           </div>
           <div className="cardPrice">
             <p>${item.price}</p>
+            <i className="fa fa-times" onClick={() => removeItem(item.id)}></i>
           </div>
         </div>
       ))}
