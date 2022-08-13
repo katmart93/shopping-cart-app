@@ -9,7 +9,7 @@ export default function ShoppingCartContainer({
   itemCount,
 }) {
   return (
-    <div className="shoppingCartContainer">
+    <div className={`shoppingCartContainer ${!hiddenMenu ? "" : "hidden"}`}>
       <ShoppingCart cartItems={cartItems} />
       <TotalPrice totalPrice={totalPrice} itemCount={itemCount} />
     </div>
