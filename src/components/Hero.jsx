@@ -18,7 +18,7 @@ export default function Hero() {
     setTotalPrice((prevPrice) => prevPrice + shoePrice);
     if (cartItems.find((item) => item.img === shoeImg)) {
       const result = cartItems.find((item) => item.img === shoeImg);
-      result.catrtCount++;
+      result.cartCount++;
       return;
     }
 

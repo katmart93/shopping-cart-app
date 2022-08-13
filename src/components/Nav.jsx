@@ -14,6 +14,7 @@ export default function Nav({ itemCount, hiddenMenu, setHiddenMenu }) {
               hiddenMenu ? "fas fa-times fa-lg" : "fas sa-shopping-cart fa-lg"
             }
           ></i>
+          <p>{itemCount > 0 && itemCount}</p>
         </div>
       </Container>
     </nav>
